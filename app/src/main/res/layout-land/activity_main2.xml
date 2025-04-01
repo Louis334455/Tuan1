@@ -17,7 +17,7 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="129dp"
+            android:layout_height="wrap_content"
             android:text="THÔNG TIN THU NHẬP"
             android:textAlignment="center"
             android:textSize="24sp"
@@ -26,28 +26,28 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="361dp"
-        android:orientation="vertical"
+        android:layout_height="251dp"
+        android:orientation="horizontal"
         android:padding="5dp">
 
         <TextView
             android:id="@+id/thongtinnhan"
             android:layout_width="match_parent"
-            android:layout_height="340dp"
+            android:layout_height="232dp"
             android:background="@drawable/text_view"
-            android:lineSpacingExtra="14sp"
+            android:lineSpacingExtra="8sp"
             android:paddingStart="5dp"
             android:paddingLeft="5dp"
             android:paddingTop="5dp"
             android:paddingEnd="5dp"
             android:paddingRight="5dp"
             android:paddingBottom="5dp"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="125dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="5dp">
 

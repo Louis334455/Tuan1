@@ -5,19 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0EEEE"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:orientation="vertical">
+        android:layout_height="54dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Thông Tin Sinh VIên"
+            android:layout_height="75dp"
+            android:fontFamily="serif"
+            android:text="THÔNG TIN SINH VIÊN"
             android:textAlignment="center"
+            android:textColor="#3a516f"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -36,7 +40,9 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="Họ và tên"
-            android:textSize="16sp" />
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/Name"
@@ -58,14 +64,16 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="MSSV"
-            android:textSize="16sp" />
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/ID"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:inputType="text" />
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
@@ -80,7 +88,9 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="Lớp"
-            android:textSize="16sp" />
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/Lop"
@@ -92,15 +102,41 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="SĐT"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/sdt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="phone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="SInh Viên Năm"
+            android:layout_height="38dp"
+            android:text="Sinh Viên Năm"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
 
@@ -123,34 +159,42 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Năm 1" />
+                android:text="Năm 1"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/Nam2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Năm 2" />
+                android:text="Năm 2"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/Nam3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Năm 3" />
+                android:text="Năm 3"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/Nam4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Năm 4" />
+                android:text="Năm 4"
+                android:textSize="16sp"
+                android:textStyle="bold" />
         </RadioGroup>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:gravity="center"
         android:padding="5dp">
 
@@ -159,7 +203,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chuyên ngành"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -174,26 +218,32 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MT" />
+            android:text="Máy Tính"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/checkBoxM"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="M" />
+            android:text="Viễn Thông"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/checkBoxDT"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="DT" />
+            android:text="Điện Tử"
+            android:textSize="14sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="54dp"
         android:gravity="center"
         android:padding="5dp">
 
@@ -202,21 +252,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Kế Hoạch Phát Triển Bản Thân"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="145dp"
+        android:layout_height="120dp"
         android:gravity="center"
         android:padding="5dp">
 
 
         <EditText
             android:id="@+id/KeHoach"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="411dp"
+            android:layout_height="111dp"
             android:layout_weight="1"
             android:background="@drawable/edit_text"
             android:ems="10"
@@ -225,18 +275,17 @@
     </LinearLayout>
 
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="145dp"
-    android:gravity="center"
-    android:padding="5dp">
-
-    <Button
-        android:id="@+id/btgui"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gửi Thông Tin"/>
-</LinearLayout>
+        android:gravity="center"
+        android:padding="5dp">
 
+        <Button
+            android:id="@+id/btgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gửi Thông Tin" />
+    </LinearLayout>
 
 
 </LinearLayout>

@@ -16,7 +16,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    EditText Ten, MS, Lop, KeHoach;
+    EditText Ten, MS, Lop, KeHoach,SDT;
     Button btGui;
     RadioGroup Nam;
     CheckBox Nhung, Mang, DienTu;
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Nhung = findViewById(R.id.checkBoxMT);
         Mang = findViewById(R.id.checkBoxM);
         DienTu = findViewById(R.id.checkBoxDT);
+        SDT=findViewById(R.id.sdt);
 
         btGui.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
                 String lop = Lop.getText().toString();
                 String ms = MS.getText().toString();
                 String kh = KeHoach.getText().toString();
+                String sdt=SDT.getText().toString();
                 int id_radio = Nam.getCheckedRadioButtonId();
                 String namhoc = "Chưa chọn";
                 if(id_radio!=0) {
                     RadioButton selectedRadioButton = findViewById(id_radio);
-
                     namhoc = selectedRadioButton.getText().toString();
                 }
                 String chuyenNganh = "Chưa chọn";
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 String thongTin = "Tên: " + ten + "\n"
                         + "MSSV: " + ms + "\n"
                         + "Lớp: " + lop + "\n"
+                        + "SDT: " + sdt+"\n"
                         + "Năm học: " + namhoc + "\n"
                         + "Chuyên ngành: " + chuyenNganh + "\n"
                         + "Kế hoạch: " + kh;
