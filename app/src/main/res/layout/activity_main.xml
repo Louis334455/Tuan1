@@ -265,8 +265,8 @@
 
         <EditText
             android:id="@+id/KeHoach"
-            android:layout_width="411dp"
-            android:layout_height="111dp"
+            android:layout_width="394dp"
+            android:layout_height="59dp"
             android:layout_weight="1"
             android:background="@drawable/edit_text"
             android:ems="10"
@@ -281,9 +281,25 @@
         android:padding="5dp">
 
         <Button
+            android:id="@+id/btsms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2196F3"
+            android:text="Nhắn tin" />
+
+        <Button
+            android:id="@+id/btcall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#E91E63"
+            android:text="Gọi" />
+
+        <Button
             android:id="@+id/btgui"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Gửi Thông Tin" />
     </LinearLayout>
 

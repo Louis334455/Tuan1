@@ -78,8 +78,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="0dp"
-                  >
+                    android:padding="0dp">
 
                     <RadioButton
                         android:id="@+id/Nam1"
@@ -164,23 +163,45 @@
 
                 <EditText
                     android:id="@+id/KeHoach"
-                    android:layout_width="match_parent"
-                    android:layout_height="131dp"
+                    android:layout_width="352dp"
+                    android:layout_height="156dp"
                     android:background="@drawable/edit_text"
                     android:gravity="top"
                     android:inputType="textMultiLine" />
 
-                <Button
-                    android:id="@+id/btgui"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Gửi Thông Tin" />
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btsms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#2196F3"
+                        android:text="Nhắn tin" />
+
+                    <Button
+                        android:id="@+id/btgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gửi Thông Tin" />
+
+                    <Button
+                        android:id="@+id/btcall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#E91E63"
+                        android:text="Gọi" />
+                </LinearLayout>
+
+
+
             </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
-
 
 
 </LinearLayout>

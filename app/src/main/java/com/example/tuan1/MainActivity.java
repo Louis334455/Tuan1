@@ -1,6 +1,8 @@
 package com.example.tuan1;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,13 +13,14 @@ import android.widget.RadioGroup;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     EditText Ten, MS, Lop, KeHoach,SDT;
-    Button btGui;
+    Button btGui, btSMS, btCall;
     RadioGroup Nam;
     CheckBox Nhung, Mang, DienTu;
 
@@ -42,7 +45,27 @@ public class MainActivity extends AppCompatActivity {
         Mang = findViewById(R.id.checkBoxM);
         DienTu = findViewById(R.id.checkBoxDT);
         SDT=findViewById(R.id.sdt);
-
+        btSMS = findViewById(R.id.btsms);
+        btCall = findViewById(R.id.btcall);
+        btSMS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent smsintent=new Intent(Intent.ACTION_SENDTO, Uri.parse("sms:"+SDT.getText().toString()));
+                startActivity(smsintent);
+            }
+        });
+        btCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_call =new Intent(Intent.ACTION_CALL,Uri.parse("tel:"+SDT.getText().toString()));
+                if (ActivityCompat.checkSelfPermission(MainActivity.this, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(MainActivity.this, new
+                            String[]{android.Manifest.permission.CALL_PHONE},1);
+                    return;
+                }
+                startActivity(intent_call);
+            }
+        });
         btGui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
